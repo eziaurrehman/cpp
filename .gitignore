@@ -1,0 +1,20 @@
+# Ignore everything
+*
+
+# Allow all directories
+!*/
+
+# Allow C++ source files
+!*.cpp
+
+# Allow Markdown files
+!*.md
+
+# Always keep .gitignore
+!.gitignore
+
+# VS Code settings
+.vscode/
+
+# Temporary files
+tempCodeRunnerFile.*
