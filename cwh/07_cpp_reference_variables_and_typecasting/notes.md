@@ -1,18 +1,12 @@
 # C++ Reference Variables & Typecasting:
 
-In this C++ tutorial we discuss **reference variables** and **typecasting**. In the previous lesson we covered header files and operators. The topics covered here:
-
-- Built-in Data Types  
-- Float, Double and Long Double Literals  
-- Reference Variables  
-- Typecasting
-
----
 ## Built-in Data Types
+
 Built-in data types are predefined by the language and can be used directly. The example program below declares three variables `a`, `b`, and `c` inside `main`, and one global variable `g`. To access the global variable we can use the scope resolution operator `::`.
 
 **Example**:
 
+```cpp
     #include <iostream>
     using namespace std;
 
@@ -29,6 +23,7 @@ Built-in data types are predefined by the language and can be used directly. The
      cout<<"The global c is "<<::c;
         return 0;
     }
+```
 
 **Expected output:**
 
@@ -38,7 +33,7 @@ Built-in data types are predefined by the language and can be used directly. The
     9
     The sum is 14
     The global c is 45
----
+
 As we hav eentered the value of the variable "a" as five and "b" as 6, it gives us the sum 14, but for the global variable,it has given us the value of 45.
 
 ## Float, Double and Long Double Literals
@@ -77,8 +72,6 @@ Decimal literals are `double` by default in C++. To make a literal a `float`, ap
 
 > Note: The sizes above are common on many modern systems (4, 8, 16 bytes), but `sizeof(long double)` can vary by compiler/ABI.
 
----
-
 ## Reference Variable:
 
 Reference variables can be defined as another name for an already existing variable. These are also called an alias. For example, let us say we have a variable with the name of **"sum"**, but we also want to use the same variable with the name of **"add"**, to do that we will make a reference variable with the name of **"add"**. The example code for the reference variable is below.
@@ -116,7 +109,78 @@ Reference variables can be defined as another name for an already existing varia
 
 ## Typecasting:
 
-**Typecasting** means converting a value from one type to another. In C++ you can use the C-style cast `(type)value` or the functional form `type(value)`. (C++ also offers `static_cast`, `const_cast`, `reinterpret_cast` — preferred in modern C++ for safety, but basic casts are shown below.)
+- The process of converting data type of a value during execution
+
+### 1. Implicit Type Casting
+
+- Performed automatically by C++ compiler
+- Also known as automatic conversion
+- Arithmetic operations are performed between operands of the same type
+- if operands do not have the same type, C++ will automatically convert one to be the type of the other
+- suppose an expression contains an interger and double as operands. The result will be evaluated to a double data type.
+- conversion from one data type to another is proven to data loss
+
+````cpp
+# C++ Type Promotion and Demotion
+
+```text
+          No Data Loss
+               ↑
++-------------+
+| long double |
++-------------+
+       ↑
++-------------+
+|   double    |
++-------------+
+       ↑
++-------------+
+|    float    |
++-------------+
+       ↑
++-------------+
+|    long     |
++-------------+
+       ↑
++-------------+
+|     int     |
++-------------+
+       ↑
++-------------+
+|    short    |
++-------------+
+       ↑
++-------------+
+|    char     |
++-------------+
+       ↓
+          Data Loss
+````
+
+**Rules**
+
+1. char, short, unsigned short are automatically promoted to int.
+
+2. When operating with values of diiferent data types, the lower-ranked one is promoted to the types of the higher one.
+
+3. When using the = operator, the type of expression on right will be converted to the type of variable on left.
+
+4. If a real value is assigned to an integer variable, it is truncated(shopped off after the decimal point, not rounded off).
+
+5. If an integer value is assigned to a real varaible, it is promoted (conversion to a higher type )to a real (decimal point added).
+
+### 2. Explicit ype casting
+
+- Explicit casting is performed by programmer.
+- **cast operator:** provide explicit type conversion
+- **syntax:** static_cast<Data Type>(Expression)
+- **type:** it indicated the data type to which operand is to be converted
+- **Expression:** it indicated the constant, variable or expression whose data type is to be converted.
+- **Example:**
+
+```cpp
+int A = 5 + static_cast <int>(12.75);
+```
 
 **Example1**:
 
@@ -156,16 +220,15 @@ Reference variables can be defined as another name for an already existing varia
     b as int (functional): 5
 
 > Note: Casting `float` to `int` truncates the fractional part (does not round).
----
-````
+
 **Example2:**
 
 #include <iostream>
 using namespace std;
 
 int main() {
-    int a = 45;   
-    float b = 45.46;
+int a = 45;  
+ float b = 45.46;
 
     cout << "The value of a is " << (float)a << endl;
     cout << "The value of a is " << float(a) << endl;
@@ -182,12 +245,12 @@ int main() {
     cout << "The expression is " << a + (int)b << endl;
 
     return 0;
+
 }
-````
+
 We have initialized two variables, integer "a" and float "b". After that, we converted an integer variable "a" into a float variable and float variable "b" into an integer variable. In C++, there are two ways to typecast a variable, either using "(float)a" or using "float(a)". The output for the above program is shown below.
 
-
-````
+```
 Output:
 
 The value of a is 45
@@ -198,12 +261,5 @@ The value of c is 45
 The expression is 90.46
 The expression is 90
 The expression is 90
-````
 
-## Summary & Notes (minor corrections applied)
-- Corrected the arithmetic sum in the built-in data types example (5 + 6 = 11).  
-- Renamed the global variable to `g` for clarity and used `::g` to demonstrate the scope resolution operator.  
-- Added clarifying notes where behavior or output may vary by system (for example, `sizeof(long double)`).  
-- Example programs include small, self-contained C++ snippets and their expected outputs. You can copy each snippet into a `.cpp` file, compile with a standard compiler (e.g., `g++ file.cpp -o file`) and run to verify the outputs on your system.
----
-
+```

@@ -1,4 +1,4 @@
-# include<iostream>
+/* # include<iostream>
 
 using namespace std;
 
@@ -14,7 +14,7 @@ int main(){
     //int b = 5;
     float pi=3.14;
     char c ='d';
-    
+
     sum();
     cout<<glo;
     //cout << "This is tutorial 4. \nHere the value of a is " <<a <<". \nThe value of b is "<< b;
@@ -23,5 +23,4 @@ int main(){
     return 0;
 
 }
-
-
+*/

@@ -1,25 +1,6 @@
 # Introduction to C++:
 
-- In these C++ tutorials, we are going to learn about the C++ programming language from the very basics to the industry level.
-- This course has been designed in a way to nurture the beginners setting their feet in this discipline. So tighten your belts, and enjoy the ride!
-
-- Before starting, let me explain to you the difference between this and any other source for learning **C++:**
-
-1. This is a whole complete package in itself, covering from A to Z of the language.
-2. No redundancy and monotonicity.
-3. Beginner friendly, hence easy to learn.
-4. No prerequisite, just a zeal for learning.
-
-- To start with, I’ll be covering these things in today’s tutorial:
-
-  - What is programming and why C++?
-  - Installation of Visual Studio Code
-  - Installation of g++
-  - Writing our first program and executing it.
-
-  ***
-
-# What is Programming, Programming Language, and Why C++?
+## What is Programming, Programming Language, and Why C++?
 
 ## 1. What is Programming
 
@@ -34,10 +15,6 @@
 2. **Hardware-Level Control:** C++ is considered close to the hardware, allowing programmers to give instructions directly to the system with minimal intermediaries.
 3. **Object-Oriented Programming (OOP):** C++ supports object-oriented programming, enabling the creation of real-world software systems with modularity, reusability, and maintainability.
 4. **Practical Ease:** While terms like "object-oriented" might sound complex, C++ provides a powerful yet approachable way for programmers to develop efficient and scalable software.
-
-## **Note:**
-
-- C++ continues to be a strong choice for learning programming concepts, understanding computer fundamentals, and building robust applications.
 
 ---
 
@@ -121,7 +98,6 @@ To write our first C++ program, we need **Visual Studio Code (VS Code)**, which 
 To make coding in C++ easier, install the following extensions:
 
 1. **C/C++ Extension**
-
    - Go to the **Extensions menu** in VS Code.
    - Search for `"C/C++"` and click **Install**.
    - This extension provides features like **auto-complete** and **dropdown suggestions**, helping you write code faster.
@@ -143,9 +119,7 @@ To make coding in C++ easier, install the following extensions:
 2. Press the **Run button** to execute the code.
 3. The output will appear in the **output window** of VS Code.
 
-> **Note:** In this tutorial, we are only focusing on writing and executing the program. The details of the code itself will be explained step by step in upcoming lectures.
-
-Code as described/written in the video
+## Examples of progarm
 
 ```
 #include<iostream>

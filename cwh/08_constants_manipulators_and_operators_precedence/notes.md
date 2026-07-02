@@ -1,17 +1,5 @@
 # Constants, Manipulators & Operator Precedence:
 
-In this series of our C++ tutorials, we will visualize **constants, manipulators, and operator precedence** in the C++ language in this lecture.  
-In our last lesson, we discussed **reference variables and typecasting** in C++.
----
-
-## Topics Covered in This Tutorial
-
-- Constants in C++
-- Manipulators in C++
-- Operator Precedence in C++
-
----
-
 ## Constants in C++
 
 Constants are **unchangeable**; when a constant variable is initialized in a program, its value **cannot be changed afterward**.
@@ -25,7 +13,7 @@ using namespace std;
 int main() {
     const float a = 3.11;
     // a = 45.6;  // This line will cause an error
-    
+
     cout << "The value of a is: " << a << endl;
 
 
@@ -50,6 +38,19 @@ error: assignment of read-only variable 'a'
 ## Manipulators in C++:
 
 In C++ programming, **manipulators** are used to format the output.
+
+Two types of manipulators:
+
+- with parameters
+- without parameters
+
+Parameterized: require iomanip header
+
+- setpreciion,setw, and setfill
+
+Nonparameterized: require iostream header
+
+- endl, fixed, showpoint, and left
 
 The two most commonly used manipulators are:
 
@@ -108,9 +109,11 @@ The value of c with setw is: 1233
 Operator precedence determines **which operator is evaluated first** in an expression.
 
 Example:
+
 ```
 int c = a * b + c;
 ```
+
 - Multiplication (`*`) has **higher precedence** than addition (`+`)
 - So, `a * b` is evaluated first
 
@@ -159,12 +162,3 @@ The value of d is: 61
 - Addition and subtraction have the **same precedence**
 - Their **associativity is left-to-right**
 - So the expression is solved step by step from left to right
-
----
-
-## Summary
-
-- **Constants**: Values that cannot be changed once initialized
-- **Manipulators**: Used to format output (`endl`, `setw`)
-- **Operator Precedence**: Decides which operation is performed first
-- **Operator Associativity**: Decides the direction of evaluation when precedence is the same

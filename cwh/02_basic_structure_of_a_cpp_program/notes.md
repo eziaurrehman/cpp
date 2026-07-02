@@ -1,12 +1,6 @@
 # Basic Structure of a C++ Program:
 
-In this series of C++ tutorials, we will visualize the **basic structure of a C++ program**. In our last lesson, we discussed C++, and we had also learned how to download and install **Visual Studio Code** and **g++**
-
-In our previous lecture, we had written and executed a small C++ program. Today, we are going to discuss that program in more detail.
-
----
-
-## Program from the Previous Lecture:
+## Program:
 
 ```cpp
 #include <iostream>
@@ -27,6 +21,15 @@ int main() {
 - `#include` is a **keyword** used to add libraries to our program.
 - `iostream` is the **library** we are adding.
 - **Purpose:** The `iostream` library helps us get input and show output. It has more uses, but for now, we focus on input/output.
+- preprocessor is a program that set up your source code for the complier.
+- the iostream file is called a header file, so it should be include: at the head , or top, of the program
+- The iostream file contain code that allows a Cpp program to display output and read input from keyboard
+
+### Use the standard (std) namespace
+
+- namespaces defined , collection of name definition
+- namespace std has all standard library we need
+- all the identifer in the ANSI standar header files are pat of the std namespace
 
 ---
 
@@ -43,19 +46,9 @@ int main() {
 - `main()` is a **function**, and the parentheses `()` indicate it is a function.
 - `{` indicates the **start** of the function, and `}` indicates the **end**.
 
-#### Analogy:
-
-Imagine you own a coffee shop with three employees:
-
-- Anna takes orders.
-- Blake makes coffee.
-- Charlie delivers coffee.
-
-Anna is like `main()`. She starts the process, Blake and Charlie perform tasks, and the final product (coffee) is returned.
-
-**Note:**
-
 - `main` is a **reserved keyword** and cannot be changed.
+- overall structure of a C++ program contain one fuction named main(), called the driver function
+- all other function are invoked from main()
 
 ---
 
@@ -82,13 +75,12 @@ Anna is like `main()`. She starts the process, Blake and Charlie perform tasks, 
 
 ---
 
-## Summary
+## Identifier
 
-We have learned the **anatomy of a C++ program**, including:
+- Identifier are name of things that appear in programs such as variable, constants, and functions etc.
 
-- Header files (`#include <iostream>`)
-- Functions (`int main()`)
-- Output statements (`std::cout`)
-- Return statements (`return 0`)
+### Types of identifier
 
-This will help you understand the **functions of various parts** of a C++ program.
+1. standard/ predefined identifiers
+
+2. user-defined identifiers
