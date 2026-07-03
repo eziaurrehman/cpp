@@ -35,6 +35,7 @@ int main()
     float b = 45.46;
 
     cout << "The value of a is " << (float)a << endl;
+    cout << "The data type of a is " << typeid(a).name() << endl;
     cout << "The value of a is " << float(a) << endl;
 
     cout << "The value of b is " << (int)b << endl;
