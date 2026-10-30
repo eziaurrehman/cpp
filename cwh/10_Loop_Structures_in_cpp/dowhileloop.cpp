@@ -29,6 +29,8 @@ int main(){
         num++;
 
     }
+
+    
     while (num<=5);
     
 
